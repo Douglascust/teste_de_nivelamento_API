@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "0490b92a-f347-43c6-8593-0d7abfba7769",
+		"name": "Operadoras API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43635174",
+		"_collection_link": "https://douglascustodio.postman.co/workspace/Douglas-Custodio's-Workspace~374de0a6-535d-4288-8d2c-403803fd30b0/collection/43635174-0490b92a-f347-43c6-8593-0d7abfba7769?action=share&source=collection_link&creator=43635174"
+	},
+	"item": [
+		{
+			"name": "Buscar Todas as Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/operadoras",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"operadoras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Termo Busca Diferente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/operadoras?termo=ADMINISTRADORA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"operadoras"
+					],
+					"query": [
+						{
+							"key": "termo",
+							"value": "ADMINISTRADORA",
+							"description": "Essa requisição busca as operadoras cadastradas, filtrando aquelas com o termo \"ADMINISTRADORA\"."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Operadoras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/operadoras?pagina=1&termo=UNIMED",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"operadoras"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "1"
+						},
+						{
+							"key": "termo",
+							"value": "UNIMED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pag. Inexistente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/operadoras?pagina=1000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"operadoras"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "1000",
+							"description": "Busca por uma pagina inexistente"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
